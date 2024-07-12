@@ -1,13 +1,16 @@
 /* Estilos generales */
 body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    background-color: #f2f2f2; /* Color de fondo de respaldo */
-    background-image: url('https://img.freepik.com/fotos-premium/rollos-chapa-acero-almacen_46383-8726.jpg'); /* Ruta a tu imagen de fondo */
-    background-repeat: repeat; /* Repetir la imagen tanto horizontal como verticalmente */
-    background-size: auto; /* Tamaño automático para mantener la calidad original */
-    padding-bottom: 140px; /* Ajuste para dejar suficiente espacio al pie de página */
-    position: relative; /* Añadimos position: relative; para que el pie de página sea relativo al cuerpo */
+    body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        background-color: #f2f2f2; /* Color de fondo de respaldo */
+        background-image: url('https://img.freepik.com/fotos-premium/rollos-chapa-acero-almacen_46383-8726.jpg'); /* Ruta a tu imagen de fondo */
+        background-repeat: repeat; /* Repetir la imagen tanto horizontal como verticalmente */
+        background-size: cover; /* Ajustar la imagen para cubrir toda el área */
+        padding-bottom: 140px; /* Ajuste para dejar suficiente espacio al pie de página */
+        position: relative; /* Añadimos position: relative; para que el pie de página sea relativo al cuerpo */
+    }
+    
 }
 
 header {
