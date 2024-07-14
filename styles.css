@@ -2,91 +2,117 @@
 
 body {
     font-family: Arial, sans-serif;
-line-height: 1.6;
-background-color: #f2f2f2; /* Color de fondo de respaldo */
-background-image: url('Multimedia/imagenes/fondo.jpeg'); /* Ruta a tu imagen de fondo */
-background-repeat: repeat; /* Repetir la imagen tanto horizontal como verticalmente */
-background-size: auto; /* Tamaño automático para mantener la calidad original */
-padding-bottom: 140px; /* Ajuste para dejar suficiente espacio al pie de página */
-position: relative; /* Añadimos position: relative; para que el pie de página sea relativo al cuerpo */
+    line-height: 1.6;
+    background-color: #f2f2f2; /* Color de fondo de respaldo */
+    background-image: url('Multimedia/imagenes/fondo.jpeg'); /* Ruta a tu imagen de fondo */
+    background-repeat: repeat; /* Repetir la imagen tanto horizontal como verticalmente */
+    background-size: auto; /* Tamaño automático para mantener la calidad original */
+    padding-bottom: 140px; /* Ajuste para dejar suficiente espacio al pie de página */
+    position: relative; /* Añadimos position: relative; para que el pie de página sea relativo al cuerpo */
 }
 
 header {
-background-color: rgba(51, 51, 51, 0.7); /* Ejemplo de cabecera semi-transparente */
-color: #fff;
-text-align: center;
-padding: 20px 0;
+    background-color: rgba(51, 51, 51, 0.7); /* Ejemplo de cabecera semi-transparente */
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
 }
 
 .container {
-max-width: 1200px;
-margin: 0 auto;
-padding: 20px;
-display: flex;
-flex-wrap: wrap;
-justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
 .product-item {
-width: calc(17.5% - 20px); /* Reducido en un 30% */
-margin-bottom: 20px;
-background-color: rgba(255, 255, 255, 0.3); /* Color de fondo semi-transparente */
-border: 1px solid rgba(221, 221, 221, 0.7); /* Borde semi-transparente */
-padding: 15px; /* Ajuste del padding para productos más pequeños */
-text-align: center;
-transition: transform 0.3s ease;
-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: calc(17.5% - 20px); /* Reducido en un 30% */
+    margin-bottom: 20px;
+    background-color: rgba(255, 255, 255, 0.3); /* Color de fondo semi-transparente */
+    border: 1px solid rgba(221, 221, 221, 0.7); /* Borde semi-transparente */
+    padding: 15px; /* Ajuste del padding para productos más pequeños */
+    text-align: center;
+    transition: transform 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .product-item:hover {
-transform: translateY(-5px);
-box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 .product-item img {
-width: 100%; /* Ancho del 100% para ajustar automáticamente al contenedor */
-height: auto; /* Altura automática para mantener la proporción */
-max-width: 100%; /* Garantizar que la imagen no se desborde del contenedor */
-border-radius: 5px; /* Esquinas redondeadas */
-display: block; /* Asegurar comportamiento inline-block */
-object-fit: cover; /* Ajustar la imagen sin distorsionar */
+    width: 100%; /* Ancho del 100% para ajustar automáticamente al contenedor */
+    height: auto; /* Altura automática para mantener la proporción */
+    max-width: 100%; /* Garantizar que la imagen no se desborde del contenedor */
+    border-radius: 5px; /* Esquinas redondeadas */
+    display: block; /* Asegurar comportamiento inline-block */
+    object-fit: cover; /* Ajustar la imagen sin distorsionar */
 }
 
 .product-item h3 {
-font-size: 1em; /* Ajuste del tamaño del título para productos más pequeños */
-margin-bottom: 8px; /* Ajuste del margen inferior */
+    font-size: 1em; /* Ajuste del tamaño del título para productos más pequeños */
+    margin-bottom: 8px; /* Ajuste del margen inferior */
 }
 
 .product-item p {
-font-size: 0.8em; /* Ajuste del tamaño del texto para productos más pequeños */
-color: #666;
-margin-bottom: 8px; /* Ajuste del margen inferior */
+    font-size: 0.8em; /* Ajuste del tamaño del texto para productos más pequeños */
+    color: #666;
+    margin-bottom: 8px; /* Ajuste del margen inferior */
 }
 
 .product-item .price {
-font-weight: bold;
-color: #333;
-font-size: 0.9em; /* Ajuste del tamaño del precio para productos más pequeños */
+    font-weight: bold;
+    color: #333;
+    font-size: 0.9em; /* Ajuste del tamaño del precio para productos más pequeños */
 }
 
 @media screen and (max-width: 768px) {
-.product-item {
-    width: calc(50% - 20px);
-}
+    .product-item {
+        width: calc(50% - 20px);
+    }
 }
 
 footer {
-background-color: rgba(51, 51, 51, 0.7); /* Ejemplo de pie de página semi-transparente */
-color: #0b0909;
-text-align: center;
-padding: 20px;
-width: 100%;
-position: fixed; /* Cambiamos a position: fixed; */
-bottom: 0;
-z-index: 1; /* Asegurar que el footer esté encima de otros elementos */
+    background-color: rgba(51, 51, 51, 0.7); /* Ejemplo de pie de página semi-transparente */
+    color: #0b0909;
+    text-align: center;
+    padding: 20px;
+    width: 100%;
+    position: fixed; /* Cambiamos a position: fixed; */
+    bottom: 0;
+    z-index: 1; /* Asegurar que el footer esté encima de otros elementos */
 }
 
 footer p {
-margin: 0;
-font-size: 0.8em;
+    margin: 0;
+    font-size: 0.8em;
+}
+
+/* Estilos para el botón de editar precio */
+.edit-price-btn {
+    background-color: #4CAF50; /* Color de fondo verde */
+    border: none; /* Sin bordes */
+    color: white; /* Texto en blanco */
+    padding: 10px 20px; /* Relleno del botón */
+    text-align: center; /* Alinear el texto al centro */
+    text-decoration: none; /* Sin subrayado */
+    display: inline-block; /* Mostrar como un bloque en línea */
+    font-size: 0.9em; /* Tamaño de fuente */
+    margin: 10px 0; /* Margen superior e inferior */
+    cursor: pointer; /* Cambiar el cursor al pasar por encima */
+    border-radius: 5px; /* Bordes redondeados */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Transiciones para efectos */
+}
+
+.edit-price-btn:hover {
+    background-color: #45a049; /* Color de fondo al pasar por encima */
+    transform: translateY(-3px); /* Efecto de elevación al pasar por encima */
+}
+
+/* Estilo para el icono del botón si usas Font Awesome o similar */
+.edit-price-btn i {
+    margin-right: 5px; /* Espacio entre el icono y el texto */
 }
