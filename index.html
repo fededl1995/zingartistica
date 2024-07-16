@@ -18,7 +18,7 @@
             <h3>Venturi Americano</h3>
             <p>Descripción breve del producto 1.</p>
             <p class="price">$100.00</p>
-            <button class="edit-price-btn" onclick="editPrice(this)">Editar Precio</button>
+            <button onclick="editPrice(this)">Editar Precio</button>
         </div>
 
         <!-- Producto 2 -->
@@ -253,14 +253,6 @@
             <button onclick="editPrice(this)">Editar Precio</button>
         </div> 
     <footer>
-        <script>
-            function editPrice(button) {
-                let newPrice = prompt("Ingrese el nuevo precio:");
-                if (newPrice !== null && newPrice.trim() !== "") {
-                    button.previousElementSibling.textContent = `$${parseFloat(newPrice).toFixed(2)}`;
-                }
-            }
-        </script>
         <p>Contacto: Alberto Z. Tel: 1156300715</p>
     </footer>
     <script src="script.js"></script>
