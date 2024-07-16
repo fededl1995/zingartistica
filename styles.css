@@ -92,22 +92,23 @@ footer p {
 
 /* Estilos para el botón de editar precio */
 .edit-price-btn {
-    background-color: #28a745; /* Color de fondo verde */
+    background-color: #6c757d; /* Color de fondo gris suave */
     border: none; /* Sin bordes */
     color: white; /* Texto en blanco */
-    padding: 8px 16px; /* Relleno del botón */
+    padding: 10px 20px; /* Relleno del botón */
     text-align: center; /* Alinear el texto al centro */
     text-decoration: none; /* Sin subrayado */
     display: inline-block; /* Mostrar como un bloque en línea */
     font-size: 0.9em; /* Tamaño de fuente */
     margin: 10px 0; /* Margen superior e inferior */
     cursor: pointer; /* Cambiar el cursor al pasar por encima */
-    border-radius: 25px; /* Bordes redondeados */
+    border-radius: 50px; /* Bordes redondeados más suaves */
     transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease; /* Transiciones para efectos */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra leve */
 }
 
 .edit-price-btn:hover {
-    background-color: #218838; /* Color de fondo al pasar por encima */
+    background-color: #5a6268; /* Color de fondo al pasar por encima */
     transform: translateY(-3px); /* Efecto de elevación al pasar por encima */
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Sombra al pasar por encima */
 }
