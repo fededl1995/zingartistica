@@ -12,12 +12,12 @@ function authenticate() {
     const username = document.getElementById('username').value;
     const password = document.getElementById('password').value;
 
-    // Validación básica de usuario y contraseña (deberías implementar una validación más segura en un entorno real)
     if (username === "admin" && password === "admin123") {
         authenticated = true;
         alert("Autenticado correctamente.");
-        showEditButtons(); // Mostrar botones después de autenticar
-        closeLoginDialog(); // Cerrar el modal de inicio de sesión
+        showEditButtons();
+        showUpdatePricesContainer();
+        closeLoginDialog();
     } else {
         alert("Usuario o contraseña incorrectos.");
     }
@@ -45,26 +45,53 @@ function editPrice(button) {
     }
 }
 
-// Función para mostrar los botones de editar precio
+function updatePrices() {
+    if (!authenticated) {
+        authenticate();
+    }
+
+    if (authenticated) {
+        const percentage = document.getElementById('percentage').value;
+        const percentageDecimal = percentage / 100;
+        const products = document.querySelectorAll('.product-item');
+
+        products.forEach((product, index) => {
+            const priceElement = product.querySelector('.price');
+            const originalPrice = parseFloat(priceElement.textContent.replace('$', ''));
+            const newPrice = originalPrice * (1 + percentageDecimal);
+            const formattedPrice = "$" + newPrice.toFixed(2);
+            priceElement.textContent = formattedPrice;
+            localStorage.setItem('price' + index, formattedPrice);
+        });
+    }
+}
+
 function showEditButtons() {
     const editButtons = document.querySelectorAll('.edit-price-btn');
     editButtons.forEach(button => {
-        button.style.display = 'inline-block'; // Mostrar el botón
+        button.style.display = 'inline-block';
     });
 }
 
-// Cargar los precios almacenados al cargar la página
+function showUpdatePricesContainer() {
+    document.getElementById('updatePricesContainer').style.display = 'block';
+}
+
 window.onload = function() {
     loadPrices();
-    hideEditButtons(); // Ocultar botones al cargar la página
+    hideEditButtons();
+    hideUpdatePricesContainer();
 };
 
-// Función para ocultar los botones de editar precio
 function hideEditButtons() {
     const editButtons = document.querySelectorAll('.edit-price-btn');
     editButtons.forEach(button => {
-        button.style.display = 'none'; // Ocultar el botón
+        button.style.display = 'none';
     });
+}
+
+function hideUpdatePricesContainer() {
+    document.getElementById('updatePricesContainer').style.display = 'none';
 }
 
 function loadPrices() {

@@ -206,28 +206,30 @@
             <p class="price">$150.00</p>
             <button class="edit-price-btn" onclick="editPrice(this)">Editar Precio</button>
 
-        </div>   <div class="product-item">
+        </div>   
+        <div class="product-item">
             <img src="Multimedia/imagenes/31.jpeg" alt="Producto 31">
             <h3>Abrazaderas</h3>
             <p>Descripción breve del producto 2.</p>
             <p class="price">$150.00</p>
             <button class="edit-price-btn" onclick="editPrice(this)">Editar Precio</button>
 
-        </div>   <div class="product-item">
+        </div>   
+        <div class="product-item">
             <img src="Multimedia/imagenes/32.jpeg" alt="Producto 32">
             <h3>Eolicos todas las medidas</h3>
             <p>Descripción breve del producto 2.</p>
             <p class="price">$150.00</p>
             <button class="edit-price-btn" onclick="editPrice(this)">Editar Precio</button>
-
-        </div>      <div class="product-item">
+        </div>      
+        <div class="product-item">
             <img src="Multimedia/imagenes/34.jpeg" alt="Producto 34">
             <h3>Grampas Americanas </h3>
             <p>Descripción breve del producto 2.</p>
             <p class="price">$150.00</p>
             <button class="edit-price-btn" onclick="editPrice(this)">Editar Precio</button>
-
-        </div>      <div class="product-item">
+        </div>      
+        <div class="product-item">
             <img src="Multimedia/imagenes/36.jpeg" alt="Producto 36">
             <h3>Curva articulada</h3>
             <p>Descripción breve del producto 2.</p>
@@ -240,14 +242,13 @@
             <p>Descripción breve del producto 2.</p>
             <p class="price">$150.00</p>
             <button class="edit-price-btn" onclick="editPrice(this)">Editar Precio</button>
-
-        </div>   <div class="product-item">
+        </div>   
+        <div class="product-item">
             <img src="Multimedia/imagenes/39.jpeg" alt="Producto 39">
             <h3>Sombrero H</h3>
             <p>Descripción breve del producto 2.</p>
             <p class="price">$150.00</p>
             <button class="edit-price-btn" onclick="editPrice(this)">Editar Precio</button>
-
         </div>   <div class="product-item">
             <img src="Multimedia/imagenes/40.jpeg" alt="Producto 40">
             <h3>Reduccion </h3>
@@ -258,7 +259,7 @@
     <footer>
         <p>Contacto: Alberto Z. Tel: 1156300715</p> 
         
-         <button onclick="showLoginDialog()">Iniciar Sesión</button>
+        <button onclick="showLoginDialog()">Iniciar Sesión</button>
     </footer>
 
     <div id="loginModal" class="modal">
@@ -269,6 +270,11 @@
             <input type="password" id="password" placeholder="Contraseña">
             <button onclick="authenticate()">Ingresar</button>
         </div>
+    </div>
+    
+    <div id="updatePricesContainer" style="display: none;">
+        <input type="number" id="percentage" placeholder="Porcentaje" />
+        <button onclick="updatePrices()">Actualizar Precios</button>
     </div>
     <script src="script.js"></script>
      
