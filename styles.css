@@ -92,10 +92,10 @@ footer p {
 
 /* Estilos para el botón de editar precio */
 .edit-price-btn {
-    background-color: #6c757d; /* Color de fondo gris suave */
+    background-color: #007bff; /* Color de fondo azul claro */
     border: none; /* Sin bordes */
     color: white; /* Texto en blanco */
-    padding: 10px 20px; /* Relleno del botón */
+    padding: 8px 16px; /* Relleno del botón */
     text-align: center; /* Alinear el texto al centro */
     text-decoration: none; /* Sin subrayado */
     display: inline-block; /* Mostrar como un bloque en línea */
@@ -108,7 +108,7 @@ footer p {
 }
 
 .edit-price-btn:hover {
-    background-color: #5a6268; /* Color de fondo al pasar por encima */
+    background-color: #0056b3; /* Color de fondo al pasar por encima */
     transform: translateY(-3px); /* Efecto de elevación al pasar por encima */
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Sombra al pasar por encima */
 }
