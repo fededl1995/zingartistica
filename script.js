@@ -12,6 +12,7 @@ function authenticate() {
     const username = document.getElementById('username').value;
     const password = document.getElementById('password').value;
 
+    // Simulación de autenticación (debería ser implementado en el backend)
     if (username === "admin" && password === "admin123") {
         authenticated = true;
         alert("Autenticado correctamente.");
@@ -38,11 +39,29 @@ function editPrice(button) {
         if (newPrice !== null && !isNaN(newPrice) && newPrice !== "") {
             const formattedPrice = "$" + parseFloat(newPrice).toFixed(2);
             priceElement.textContent = formattedPrice;
-            localStorage.setItem('price' + productIndex, formattedPrice);
+            
+            // Simulación de almacenamiento en el servidor (debería ser en el backend)
+            savePriceToServer(productIndex, formattedPrice);
         } else {
             alert("Ingrese un precio válido.");
         }
     }
+}
+
+function savePriceToServer(index, price) {
+    // Aquí deberías enviar una solicitud al servidor para guardar el precio actualizado
+    // Ejemplo usando fetch o axios para enviar datos al servidor
+    // Ejemplo con fetch (debes implementar en tu servidor la recepción y almacenamiento de datos)
+    fetch('http://tu-servidor.com/api/save-price', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ index: index, price: price })
+    })
+    .then(response => response.json())
+    .then(data => console.log(data))
+    .catch(error => console.error('Error:', error));
 }
 
 function updatePrices() {
@@ -61,7 +80,9 @@ function updatePrices() {
             const newPrice = originalPrice * (1 + percentageDecimal);
             const formattedPrice = "$" + newPrice.toFixed(2);
             priceElement.textContent = formattedPrice;
-            localStorage.setItem('price' + index, formattedPrice);
+            
+            // Simulación de almacenamiento en el servidor (debería ser en el backend)
+            savePriceToServer(index, formattedPrice);
         });
     }
 }
