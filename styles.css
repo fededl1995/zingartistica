@@ -68,9 +68,37 @@ header {
     font-size: 0.9em;
 }
 
+.product-item .price a {
+    text-decoration: none;
+    color: #008CBA; /* Azul */
+    transition: color 0.3s ease;
+}
+
+.product-item .price a:hover {
+    color: #005f6a; /* Azul más oscuro */
+}
+
+@media screen and (max-width: 1200px) {
+    .product-item {
+        width: calc(23% - 20px);
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .product-item {
+        width: calc(32% - 20px);
+    }
+}
+
 @media screen and (max-width: 768px) {
     .product-item {
-        width: calc(50% - 20px);
+        width: calc(48% - 20px);
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .product-item {
+        width: calc(100% - 20px);
     }
 }
 
